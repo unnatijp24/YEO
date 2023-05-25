@@ -1,10 +1,10 @@
 <?php
 
-if(isset($_POST['fmail'])){
+if(isset($_POST["fmail"])){
 
     $server = "localhost";
     $user = "root";
-    $password = "";
+    $password = ""; 
     $database = "mydb";
 
     $con = mysqli_connect($server,$user,$password,$database);
@@ -12,30 +12,28 @@ if(isset($_POST['fmail'])){
     if(!$con){
         die("connection to this database failed due to " . mysqli_connect_error());
     }
-   //  else{
-   //    echo "connected";
-   //  }
+    else{
+      echo "connected\n";
+    }
 
     $fmail = $_POST['fmail'];
     $fpassword = $_POST['fpassword'];
-    $cpassword = $_POST['cpassword'];
-   // echo $fmail;
-   // echo $fpassword;
-   if($cpassword == $fpassword){
-      $sql = "INSERT INTO `log` (`fmail`, `fpassword`, `dt`) VALUES ('$fmail', '$fpassword', current_timestamp());";
 
-    if(mysqli_query($con, $sql)){
+//    echo $fmail;
+//    echo $fpassword;
+
+   $query = "SELECT 'fmail', 'fpassword' FROM log WHERE (fmail='".$fmail."' AND fpassword='".$fpassword."');";
+    $sql =mysqli_query($con, $query);
+    //echo $sql;
+    echo "<pre>";
+    if(mysqli_num_rows($sql) > 0){
         header("Location:Homepage.php");
     }
     else{
-        echo "ERROR: $sql1 <br> $con->error";
+        header("location:signup.php");
     }
-   }
-    
-
    //  $con-> close();
 }
-
 ?>
 
 <!DOCTYPE html>
@@ -58,15 +56,15 @@ if(isset($_POST['fmail'])){
             </div>
          </div>
          <div class="form-container">
-            <div class="slide-controls">
-               <input type="radio" name="slide" id="login" checked>
-               <input type="radio" name="slide" id="signup">
-               <label for="login" class="slide login">Login</label>
-               <label for="signup" class="slide signup">Signup</label>
-               <div class="slider-tab"></div>
+            <!-- <div class="slide-controls"> -->
+               <!-- <input type="radio" name="slide" id="login" checked> -->
+               <!-- <input type="radio" name="slide" id="signup"> -->
+               <!-- <label for="login" class="slide login">Login</label> -->
+               <!-- <label for="signup" class="slide signup">Signup</label> -->
+               <!-- <div class="slider-tab"></div> -->
             </div>
             <div class="form-inner">
-               <form action="login.php" class="login" method="POST">
+               <form action="login-signup.php" class="login" method="POST">
                   <div class="field">
                      <input type="mail" placeholder="E-mail" name="fmail" required>
                   </div>
@@ -78,10 +76,10 @@ if(isset($_POST['fmail'])){
                      <input type="submit" value="Login">
                   </div>
                   <div class="signup-link">
-                     Don't have an Account? <a href="">Signup</a>
+                     Don't have an Account? <a href="signup.php">Signup</a>
                   </div>
                </form>
-               <form action="login-signup.php" class="signup" method="POST">
+               <!-- <form action="signup.php" class="signup" method="POST">
                   <div class="field">
                      <input type="email" placeholder="E-mail" name="fmail" required>
                   </div>
@@ -95,7 +93,7 @@ if(isset($_POST['fmail'])){
                      <div class="btn-layer">
                      <input type="submit" value="Signup">
                   </div></div>
-               </form>
+               </form> -->
             </div>
          </div>
       </div>
