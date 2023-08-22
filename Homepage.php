@@ -2,7 +2,7 @@
 <html>
 
 <head>
-    <title>Learning Channels</title>
+    <title>Home Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="action_page.php">
@@ -20,62 +20,71 @@
             font-family: "Poppins", sans-serif;
         }
 
-        a {
-            text-decoration: none;
-        }
+        body {
+      font-size: 16px;
+    }
+
+    a {
+        text-decoration: none;
+    }
     </style>
 </head>
 
 <body bgcolor="lightgray">
-    <!-- <body class="w3-theme-l5 w3-content" style="max-width:1600px"> -->
 
     <!-- Sidebar/menu -->
     <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
         <div class="w3-container">
             <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
                 title="close menu">
-
             </a>
+            
             <img src="images/logo.png" style="width:45%;" class="w3-round">
-            <!-- <i class="fa fa-remove" style="font-size:24px"></i> -->
+            
             <br><br>
-            <h4><b>Youth Employment Opportunity</b></h4>
+            <h4><b>YEO</b></h4>
             <p class="w3-text-grey">Let's start learning</p>
         </div>
-        <div class="w3-bar-block">
-            <a href="homepage.php" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-w3-theme-d5">
-                <i class="fa fa-th-large fa-fw w3-margin-right"></i>LEARN</a>
+
+        <div class="w3-bar-block w3-col-padding">
+            <button onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-w3-theme-d5">
+                <i class="fa fa-th-large fa-fw w3-margin-right"></i>HOMEPAGE</button>
+
+
             <div class="w3-dropdown-hover">
-                <button onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
-                        class="fa fa-suitcase fa-fw w3-margin-right"></i>JOBS</button>
-                <div class="w3-dropdown-content w3-bar-block w3-border">
-                    <a href="after10th_links.html" class="w3-bar-item w3-button">After 10th</a>
-                    <a href="after12th_links.html" class="w3-bar-item w3-button">After 12th</a>
-                </div>
+            <button onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-suitcase fa-fw w3-margin-right"></i>JOBS</button>
+                    <div class="w3-dropdown-content w3-bar-block w3-border">
+                        <a href="after10th_links.html" class="w3-bar-item w3-button">After 10th</a>
+                        <a href="after12th_links.html" class="w3-bar-item w3-button">After 12th</a>
+                    </div>
             </div>
+
 
             <a href="support.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
                     class="fa fa-support fa-fw w3-margin-right"></i>SUPPORT</a>
+
             <a href="study.html" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
                     class="fa fa-book fa-fw w3-margin-right"></i>LEARN</a>
+
+
             <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
                     class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
             <br><br>
-            <div id="translate_element" class="w3-padding w3-card"></div>
 
-            <script type="text/javascript">
-                function googleTranslateElementInit() {
-                    new google.translate.TranslateElement(
-                        { pageLanguage: 'en' },
-                        'translate_element'
-                    );
-                }
-            </script>
+            <div id="translate_element" class="w3-padding"></div>
 
-            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?
-cb=googleTranslateElementInit">
-</script>
-        </div>
+                <script type="text/javascript">
+                    function googleTranslateElementInit() {
+                        new google.translate.TranslateElement(
+                            { pageLanguage: 'en' },
+                            'translate_element'
+                        );
+                    }
+                </script>
+
+                <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+            </div>
     </nav>
 
     <!-- Overlay effect when opening sidebar on small screens -->
@@ -86,51 +95,49 @@ cb=googleTranslateElementInit">
     <div class="w3-main" style="margin-left:300px">
 
         <!-- Header -->
-        <!-- <header id="portfolio"> -->
-        <!-- <a href="#"><img src="images/w3images/avatar_g2.jpg" style="width:65px;"
-                    class="w3-circle w3-right w3-margin w3-hide-large w3-hover-opacity"></a> -->
         <span class="w3-button w3-hide-large w3-xxlarge w3-hover-text-grey" onclick="w3_open()"><i
                 class="fa fa-bars"></i></span>
+
+        <br>
+        <br>
         <div class="w3-container">
-            <h1><b>Youth Employment Opportunity</b></h1>
-            <div class="w3-section w3-bottombar w3-padding-16">
+    <h1 class="w3-jumbo"><b>Youth Employment Opportunities</b></h1><br><br>
+  </div>
 
-                <button class="w3-button w3-white w3-large w3-padding-24"><a href="study.html">
-                        <span style="width:300px;"><i class="fa fa-book "></i>&nbsp; e-books</span></a></button>
-                <button class="w3-button w3-black w3-large w3-padding-24"><a href="channel.html">
-                        <span style="width:400px;"><i class="fa fa-rss w3-margin-right"></i>Channels</span></a></button>
-                <button class="w3-button w3-white w3-large w3-padding-24"><a href="course.html">
-                        <span style="width:400px;"><i
-                                class="fa fa-clone w3-margin-right"></i>Courses</span></a></button>
 
-            </div>
-        </div>
-        <!-- </header> -->
-
-        <!-- First Photo Grid-->
-        <div class="w3-row-padding">
-            <div class="w3-third w3-container w3-margin-bottom">
-                <img src="images/oliveboard.jpg" alt="ethics" style="width:100%; height:200px;"
-                    class="w3-hover-opacity">
-                <div class="w3-container w3-white" style="padding-bottom: 0.5rem;">
-                    <p><b>oliveboard</b></p>
-                    <button class="w3-button w3-border w3-black w3-hover-w3-theme-d5"><a
-                            href="https://www.youtube.com/@OliveboardApp/playlists" target="_blank"><i
-                                class="fa fa-folder-open w3-margin-right"></i>Watch</a></button>
-                </div>
-            </div>
+        <!-- Photo grid -->
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <img src="images/study.jpg" style="width:100%; height: 300px;" alt="career picture">
         </div>
 
-
-        <!-- Pagination -->
-        <div class="w3-center w3-padding-32">
-            <div class="w3-bar">
-                <a href="channel.html" class="w3-bar-item w3-button w3-hover-black">«</a>
-                <a href="channel.html" class="w3-bar-item w3-hover-black w3-button">1</a>
-                <a href="channel2.html" class="w3-bar-item w3-button w3-black">2</a>
-            </div>
+        <div class="w3-half">
+          <img src="images/jobs.jpg" style="width:100%; height: 300px;" alt="courses picture">
         </div>
+      </div>
 
+      <!-- Services -->
+      <div class="w3-container" id="services" style="margin-top:75px; text-align: justify;">
+        <h1 class="w3-xxxlarge w3-text-darkblue"><b>Services</b></h1>
+        <hr style="width:250px; border:3px solid darkblue" class="w3-round">
+        <p>
+          We provide information about the employment schemes that the government has declared for rural and
+          underprivileged people. We put different e-books and online links to youtube courses to meet the requirements of
+          the jobs. If an individual wants to enhance their skills, we love to show the job vacancies related to the
+          skills of the people.
+        </p>
+      </div>
+
+      <!-- Purpose -->
+      <div class="w3-container" id="purpose" style="margin-top:75px; text-align: justify;">
+        <h1 class="w3-xxxlarge w3-text-darkblue"><b>Purpose</b></h1>
+        <hr style="width:250px;border:3px solid darkblue;" class="w3-round">
+        <p> We have seen that most people are unaware of the opportunities and benefits the government has in front of
+          them. Thus, we define our goal to make all these opportunities readily accessible to them. We will endeavour to
+          do this by making our content as accessible as possible.
+        </p>
+      </div>
+                    <BR><BR>
 
         <!-- Contact Section -->
         <div class="w3-container w3-padding-large">
